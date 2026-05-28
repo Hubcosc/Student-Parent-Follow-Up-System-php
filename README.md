@@ -1,5 +1,5 @@
 > # 🔒 SOURCE CODE PRIVATE
-> 
+>
 > <p align="center">
 >   <strong>The source code in this repository is not publicly shared.</strong><br>
 >   <em>Only screenshots and documentation are displayed for portfolio/reference purposes.</em>
@@ -7,7 +7,6 @@
 
 ---
 
-<!-- COLOR BAR -->
 <p align="center">
   <img src="https://via.placeholder.com/800x5/2c3e50/2c3e50" alt="divider" width="800" height="4">
 </p>
@@ -15,14 +14,15 @@
 <h1 align="center">🎓 Student-Parent Follow-up System</h1>
 
 <p align="center">
-  <strong>A Comprehensive School Management Platform Bridging Teachers, Parents, and Administration</strong>
+  <strong>School Management Platform Bridging Teachers, Parents, and Administration</strong>
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/version-1.0-blue?style=for-the-badge" alt="Version">
-  <img src="https://img.shields.io/badge/database-MySQL-orange?style=for-the-badge&logo=mysql" alt="MySQL">
-  <img src="https://img.shields.io/badge/backend-PHP-777BB4?style=for-the-badge&logo=php" alt="PHP">
+  <img src="https://img.shields.io/badge/Version-1.0-blue?style=for-the-badge" alt="Version">
+  <img src="https://img.shields.io/badge/Database-MySQL-orange?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL">
+  <img src="https://img.shields.io/badge/Backend-PHP-777BB4?style=for-the-badge&logo=php&logoColor=white" alt="PHP">
   <img src="https://img.shields.io/badge/status-Completed-success?style=for-the-badge" alt="Status">
+  <img src="https://img.shields.io/badge/Team-Collaborative%20Build-ff6b35?style=for-the-badge" alt="Team">
 </p>
 
 ---
@@ -30,12 +30,12 @@
 ## 📋 Table of Contents
 
 - [System Overview](#-system-overview)
+- [Team](#-team)
 - [User Roles](#-user-roles--access-levels)
 - [Core Features](#-core-features)
 - [Database Structure](#-database-structure)
 - [Technology Stack](#-technology-stack)
 - [Installation](#-installation)
-  
 
 ---
 
@@ -43,19 +43,35 @@
 
 The **Student-Parent Follow-up System** is a full-featured school management solution designed to streamline academic operations, enhance parent-teacher communication, and provide real-time access to student performance data.
 
-| Aspect | Description |
-|--------|-------------|
-| **Purpose** | Bridge communication gap between school and parents |
-| **Target Users** | Schools, Colleges, Educational Institutions |
+| Aspect | Details |
+|--------|---------|
+| **Purpose** | Bridge the communication gap between school and parents |
+| **Target Users** | Schools, Colleges, and Educational Institutions |
 | **Key Benefit** | Real-time tracking of student progress |
 | **Deployment** | Web-based, Multi-user |
+| **Project Type** | Collaborative Academic / Capstone Project |
+
+---
+
+## 👨‍💻 Team
+
+> This system was collaboratively built by a team as part of an academic capstone project.
+
+| Role | Responsibility |
+|------|---------------|
+| **Full Stack Developer** | Backend logic, database design |
+| **Frontend Developer** | UI/UX, HTML/CSS/JS |
+| **Database Administrator** | Schema design, relationships |
+| **QA / Testing** | Validation, bug reporting |
+
+> *Update this table with your actual team members and their roles.*
 
 ---
 
 ## 👥 User Roles & Access Levels
 
-| Role | Badge | Permissions |
-|------|-------|-------------|
+| Role | Icon | Permissions |
+|------|------|-------------|
 | **Admin** | 🟢 | Complete system control, user management |
 | **Registrar** | 🔵 | Student enrollment, class assignment |
 | **Finance** | 💰 | Fee processing, payment verification |
@@ -69,14 +85,14 @@ The **Student-Parent Follow-up System** is a full-featured school management sol
 
 ### 📊 Academic Management
 - ✅ Daily **Attendance Tracking** with remarks
-- 📝 **Grade Management** with component scores (tests, mid, assignments, final)
+- 📝 **Grade Management** with component scores — tests, midterms, assignments, and finals
 - 📈 **Term-based Reporting** with JSON summary storage
 - 🏫 **Class & Section** organization
 
 ### 💰 Financial Management
 - 💵 **Fee Structure** by class and academic year
 - 🧾 **Payment Processing** with receipt upload
-- 🔍 **Verification System** (Pending → Approved/Rejected)
+- 🔍 **Verification Workflow** — Pending → Approved / Rejected
 - 📁 **Student Payment History**
 
 ### 💬 Communication
@@ -94,9 +110,11 @@ The **Student-Parent Follow-up System** is a full-featured school management sol
 ## 🗄️ Database Structure
 
 <details>
-<summary><b>Click to view database schema</b></summary>
+<summary><b>📂 Click to expand database schema</b></summary>
 
-### Main Tables
+<br>
+
+### 🗃️ Main Tables
 
 | Table | Description |
 |-------|-------------|
@@ -111,7 +129,7 @@ The **Student-Parent Follow-up System** is a full-featured school management sol
 | `messages` | Parent-teacher communication |
 | `grade_reports` | JSON-based term reports |
 
-### Supporting Tables
+### 🔗 Supporting Tables
 
 | Table | Purpose |
 |-------|---------|
@@ -119,11 +137,15 @@ The **Student-Parent Follow-up System** is a full-featured school management sol
 | `parent_student` | Parent-child relationship mapping |
 | `teacher_assignments` | Subject & class allocation |
 
-### Key Relationships
+### 📐 Key Relationships
 students (1) ──────< (M) attendance
+<br>
 students (1) ──────< (M) grades
+<br>
 students (M) ──────> (M) users (via parent_student)
+<br>
 teachers (M) ──────> (1) users
+<br>
 payments (M) ──────> (1) students_temp
 
 </details>
@@ -147,57 +169,66 @@ payments (M) ──────> (1) students_temp
 | **Backend** | PHP 8.2+ |
 | **Frontend** | HTML5, CSS3, JavaScript |
 | **Authentication** | Session-based with bcrypt hashing |
-| **Data Format** | JSON for reports |
+| **Data Format** | JSON for term reports |
 
 ---
 
 ## 🚀 Installation
 
 <details>
-<summary><b>Quick Setup Guide</b></summary>
+<summary><b>⚙️ Click to expand setup guide</b></summary>
 
-### Prerequisites
+<br>
+
+### ✅ Prerequisites
+
 - XAMPP / WAMP / LAMP stack
 - PHP 8.2+
-- MySQL 10.4+
+- MySQL / MariaDB 10.4+
 
-### Steps
+### 🧭 Steps
 
 ```bash
-# 1. Clone or import database
-- Run the SQL dump file in phpMyAdmin
+# 1. Import the database
+#    Open phpMyAdmin and run the provided SQL dump file
 
-# 2. Configure database connection
-- Update config.php with your credentials
+# 2. Configure the database connection
+#    Edit config.php with your local credentials
 
-# 3. Default Admin Login
-Username: admin1
-Password: password
-
-# 4. Access the system
-http://localhost/student_system
+# 3. Launch the application
+#    http://localhost/student_system
 ```
-### Default User Accounts
+
+### 🔑 Default User Accounts
 
 | Username | Role | Password |
 |----------|------|----------|
-| admin1 | Admin | password |
-| registrar1 | Registrar | password |
-| finance1 | Finance | password |
-| math.teacher | Teacher | password |
-| parent1 | Parent | password |
-| record1 | Record Office | password |
+| `admin1` | Admin | `password` |
+| `registrar1` | Registrar | `password` |
+| `finance1` | Finance | `password` |
+| `math.teacher` | Teacher | `password` |
+| `parent1` | Parent | `password` |
+| `record1` | Record Office | `password` |
+
+> ⚠️ **Note:** Change all default passwords immediately after first login.
 
 </details>
 
 ---
 
-## 📄 License
-
+📞 Contact
 <div align="center">
 
-This project is for demonstration purposes only.
+**For inquiries about this project, please reach out directly.**
 
-© 2025 Student-Parent Follow-up System
+<br>
+
+<a href="mailto:boxctf76@gmail.com">
+  <img src="https://img.shields.io/badge/Email-boxctf76%40gmail.com-red?style=for-the-badge&logo=gmail&logoColor=white" alt="Email">
+</a>
+
+<a href="https://linkedin.com/in/abduselam-kedir-5945732a6" target="_blank">
+  <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
+</a>
 
 </div>
