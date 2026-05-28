@@ -30,7 +30,6 @@
 ## 📋 Table of Contents
 
 - [System Overview](#-system-overview)
-- [Team](#-team)
 - [User Roles](#-user-roles--access-levels)
 - [Core Features](#-core-features)
 - [Database Structure](#-database-structure)
